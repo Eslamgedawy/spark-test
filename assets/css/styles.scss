@@ -193,3 +193,16 @@
 #example_wrapper{
     padding: 20px 0;
 }
+
+
+// modal
+.btns{
+    text-align: center;
+    margin-top: 15px;
+    .btn-secondary{
+        margin-right: 30px;
+    }
+}
+.modal-content{
+    background-color: #eee;
+}

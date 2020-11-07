@@ -135,4 +135,13 @@
 #example_wrapper {
   padding: 20px 0; }
 
+.btns {
+  text-align: center;
+  margin-top: 15px; }
+  .btns .btn-secondary {
+    margin-right: 30px; }
+
+.modal-content {
+  background-color: #eee; }
+
 /*# sourceMappingURL=styles.css.map */

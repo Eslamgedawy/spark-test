@@ -134,9 +134,43 @@
             </select>
           </div>
           <button class="add-emp"><i class="fa fa-plus" aria-hidden="true"></i>Employee</button>
-          <button class="add-filter"><i class="fa fa-plus" aria-hidden="true"></i>Add filter</button>
+          <button class="add-filter" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus" aria-hidden="true"></i>Add filter</button>
           <button class="export">Export<i class="fa fa-download" aria-hidden="true"></i></button>
         </div>
+        <!-- modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <!-- <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> -->
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Add filter</label>
+                    <select  id="exampleFormControlSelect1">
+                      <option>salary</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <select>
+                      <option>between</option>
+                    </select>
+                  </div>
+                  <div class="text-center">
+                    <input style="width: 100px;" type="number" name="" id=""> and <input style="width: 100px;" type="number" name="" id="">
+                  </div>
+                  <div class="btns">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- /#modal -->
         <!-- table -->
           <table class="table">
             <thead>

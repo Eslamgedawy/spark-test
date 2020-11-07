@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Spark Task - jqGrid</title>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap-toggle.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  <!-- fonts -->
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">Spark</div>
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+            <i class="fa fa-usd" aria-hidden="true"></i>
+            Payroll
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+            <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+            My Notes
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+            <i class="fa fa-money" aria-hidden="true"></i>
+            My Loans
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            My Profile
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+            <i class="fa fa-hourglass-end" aria-hidden="true"></i>
+            Reports
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+            Settings
+            </a>
+        </div>
+        <div class="social">
+            <span class="title">
+            Socail websites
+            </span>
+            <ul>
+            <li>
+                <a href="#">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn" id="menu-toggle">☰</button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mt-2 mt-lg-0">
+                <li class="nav-item">
+                HR User
+                </li>
+                <li class="nav-item">
+                <span>Language</span>
+                <input type="checkbox" checked data-toggle="toggle" data-on="English" data-off="Arabic" >
+                </li>
+                <ul class="list-group">
+                <li class="list-item">
+                    <a href="#">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    </a> 
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                    </a> 
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a> 
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i> 
+                    </a> 
+                </li>
+                </ul>
+            </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="controls">
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Show</label>
+                  <select  id="exampleFormControlSelect1">
+                    <option>20</option>
+                    <option>30</option>
+                    <option>40</option>
+                    <option>50</option>
+                  </select>
+                </div>
+                <button class="add-emp"><i class="fa fa-plus" aria-hidden="true"></i>Employee</button>
+                <button class="add-filter"><i class="fa fa-plus" aria-hidden="true"></i>Add filter</button>
+                <button class="export">Export<i class="fa fa-download" aria-hidden="true"></i></button>
+              </div>
+            <div>
+                <table id="jqGrid"></table>
+                <div id="jqGridPager"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap-toggle.min.js"></script>
+
+
+<script type="text/ecmascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/5.4.0/js/i18n/grid.locale-en.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/5.5.1/js/jquery.jqGrid.min.js" integrity="sha512-kitN10XjBDrndQOVFFNadAOBC4GNPiOTFg+pe2NwdjsiKycQWX7HWZYly/5jcbYdXqE1FtMP+0u4xFhtFP0ogQ==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/5.5.1/css/ui.jqgrid-bootstrap.min.css" integrity="sha512-FBPSe2QCu8Do+rl6S3LpH89ckzT9ZZIuNgVYTWbNmtLVIl0LR2vI9N9SEDWQYBtHmF08QHugf7OemgGdNJgD7A==" crossorigin="anonymous" />	
+<script>
+    $.jgrid.defaults.width = 780;
+    $.jgrid.defaults.styleUI = 'Bootstrap';
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    $(document).ready(function () {
+
+    $("#jqGrid").jqGrid({
+        url: 'Employees-edits.json',
+        datatype: "json",
+        colModel: [
+            { label: 'Name', name: 'fullName_FL', width: 200 },
+            { label: 'Title', name: 'position.name_FL', width: 90 },
+            { label: 'hiring Date', name: 'hiringDate', width: 150 },
+            { label: 'Salary', name: 'firstContractingSalary', width: 60, sorttype: 'integer' },
+            { label: 'Department', name: 'department.name_FL', width: 100, sorttype: 'number' }                   
+        ],
+        viewrecords: true,
+        width: 850,
+        height: 250,
+        rowNum: 6,
+        loadonce: true, 
+        pager: "#jqGridPager"
+        });
+    });
+
+
+</script>
+
+</body>
+
+</html>

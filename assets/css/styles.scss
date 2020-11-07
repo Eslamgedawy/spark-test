@@ -1,0 +1,195 @@
+.navbar{
+    button{
+        background-color: #cccccc;
+        // color: #fff;
+    }
+    .navbar-collapse{
+        .navbar-nav{
+            align-items: center;
+            @media (max-width: 991px) {
+                align-items: flex-start;
+            }
+            .nav-item{
+                margin: 0 60px;
+                @media (max-width: 991px) {
+                    margin: 20px 0px;
+                }
+                input{
+    
+                }
+                span{
+                    margin-right: 15px;
+                }
+            }
+            .list-group{
+                list-style-type: none;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 40px;
+                margin-bottom: 0;
+                @media (max-width: 991px) {
+                    margin-left: unset;
+                }
+                .list-item{
+                    margin: 0 10px;
+                    a{
+                        
+                        i{
+                            font-size: 20px;
+                            color: #232323;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.controls{
+    display: flex;
+    padding: 20px;
+    .form-group{
+        display: flex;
+        align-items: center;
+        label{
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+        select{
+            width: 90px;
+            height: 40px;
+            border-radius: 4px;
+            border-color: #ccc;
+            outline: 0;
+            margin: 0 25px;
+        }
+    }
+    button{
+        height: 40px;
+        @media (max-width: 991px) {
+            height: 100%;
+        }
+        width: 120px;
+        border: 1px solid #cccccc;
+        outline: 0;
+        border-radius: 4px;
+        background-color: #fff;
+        margin: 0 20px;
+        i{
+            margin-right: 10px;
+        }
+    }
+    .export{
+        i{
+            margin-left: 10px;
+        }
+    }
+}
+.table{
+    th{
+        position: relative;
+        i{
+            margin-left: 8px;
+        }
+        .angle{
+            position: absolute;
+            right: 15px;
+        }
+    }
+    td{
+        button{
+            border: 0;
+            background: 0;
+            color: #444;
+        }
+    }
+}
+.table-footer{
+    .progress{
+        margin-top: 20px;
+        height: 8px;
+        .progress-bar{
+            background-color: #ccc;
+        }
+    }
+    .pagination-container{
+        span{
+            position: absolute;
+            right: 15px;
+        }
+    }
+}
+
+
+// sidebar
+#sidebar-wrapper{
+    background-color: #cccccc;
+    .list-group-item{
+        background-color: #cccccc;
+        i{
+            margin-right: 8px;
+        }
+        &:hover{
+            // color: #444;
+            font-weight: bold;
+        }
+    }
+    .social{
+        margin-top: 50px;
+        .title{
+            margin-left: 20px;
+        }
+        ul{
+            list-style-type: none;
+            margin-top: 20px;
+            padding-left: 15px;
+            li{
+                display: inline-block;
+                margin: 0 3px;
+                a{
+                    width: 30px;
+                    display: block;
+                    height: 30px;
+                    background-color: #232323;
+                    text-align: center;
+                    border-radius: 50%;
+                    line-height: 30px;
+                    color: #fff;
+                    i{
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// genral
+.toggle{
+    border-color: #ccc
+}
+.toggle-handle{
+    background-color: #eee;
+}
+.toggle-off.btn{
+    background-color: #ccc;
+}
+.toggle-on.btn{
+    background-color: #cccccc;
+    color: #232323;
+    border: 0;
+    &:hover{
+        border-color: #ccc !important
+    }
+    &:active{
+        border-color: #ccc !important;
+        background-color: #cccc !important;
+    }
+}
+.toggle.btn {
+    min-width: 98px;
+    min-height: 34px;
+}
+
+#example_wrapper{
+    padding: 20px 0;
+}
